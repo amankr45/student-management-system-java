@@ -3,7 +3,11 @@
 A console-based Student Management System built using Core Java.
 
 ## Project Screenshot
-
+![Add Student.png](Screenshot/Add%20Student.png) 
+![Deleted Student Detail.png](Screenshot/Deleted%20Student%20Detail.png)
+![Search Student By ID.png](Screenshot/Search%20Student%20By%20ID.png)
+![Updated Name.png](Screenshot/Updated%20Name.png)
+![View Student.png](Screenshot/View%20Student.png)
 
 ## Features
 
@@ -57,13 +61,14 @@ Implemented using:
 * FileManager
 * Auto Save / Auto Load
 
-### Planned V2 Improvements
+## Future Improvements (V2)
 
-* HashMap<Integer, Student>
-* Faster Search
-* Faster Update
-* Faster Delete
-* Improved Performance
+* Replace ArrayList with HashMap<Integer, Student>
+* Faster Search Operations
+* Faster Update Operations
+* Faster Delete Operations
+* Improved Project Architecture
+
 
 ## Learning Outcomes
 
