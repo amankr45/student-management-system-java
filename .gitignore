@@ -5,6 +5,7 @@ out/
 .kotlin
 .idea/
 *.iml
+students.txt
 
 ### Eclipse ###
 .apt_generated
