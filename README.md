@@ -2,6 +2,9 @@
 
 A console-based Student Management System built using Core Java.
 
+## Project Screenshot
+
+
 ## Features
 
 * Add Student
@@ -28,10 +31,20 @@ A console-based Student Management System built using Core Java.
 ## Project Structure
 
 ```text
+## Project Structure
+
 src/
 └── StudentManagementSystem
     ├── v1
+    │   ├── Application.java
+    │   ├── Student.java
+    │   ├── StudentManager.java
+    │   ├── Validation.java
+    │   └── FileManager.java
+    │
     └── v2
+        └── README.md
+
 ```
 
 ### V1
