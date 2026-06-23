@@ -19,7 +19,9 @@ public class Application {
                         4.) Delete Student\s
                         5.) Update Student Data\s
                         6.) Total Number of Students\s
-                        7.) Exit
+                        7.) Sort By ID\s
+                        8.) Sort By Name\s
+                        9.) Exit
                         """
         );
             try {
@@ -144,7 +146,15 @@ public class Application {
                         System.out.println("Total Number of Students : " + totalStudents);
                         break;
 
-                    case 7:         // Auto Save Details and Exit from Main Menu
+                    case 7:
+                        manager.sortStudentsById();
+                        break;
+
+                    case 8:
+                        manager.sortStudentsName();
+                        break;
+
+                    case 9:         // Auto Save Details and Exit from Main Menu
                         manager.saveStudents();
                         System.out.println("Exit");
                         return;

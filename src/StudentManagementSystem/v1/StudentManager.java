@@ -2,6 +2,7 @@ package StudentManagementSystem.v1;
 
 import java.util.ArrayList;
 import java.io.*;
+import java.util.Comparator;
 
 public class StudentManager {
    private final ArrayList<Student> students = new ArrayList<>();
@@ -108,5 +109,25 @@ public class StudentManager {
             }
         }
         return null;
+    }
+
+    public void sortStudentsById (){
+        students.sort(new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                return o1.getStudentID() - o2.getStudentID();
+            }
+        });
+        System.out.println("Students Sorted By ID Successfully");
+    }
+
+    public void sortStudentsName(){
+        students.sort(new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                return o1.getFirstName().compareToIgnoreCase(o2.getFirstName());
+            }
+        });
+        System.out.println("Students Name is Sorted Successfully");
     }
 }
