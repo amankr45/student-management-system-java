@@ -16,18 +16,21 @@ A console-based Student Management System built using Core Java.
 * Search Student by ID
 * Update Student Details
 * Delete Student
+* Sort Students by ID
+* Sort Students by Name
+* Total Student Count
 * Validation
 * Exception Handling
 * Auto Save
 * Auto Load
 * File Handling using Text Files
-* Total Student Count
 
 ## Technologies Used
 
 * Java
 * OOP (Object-Oriented Programming)
 * ArrayList
+* Collections Framework
 * File Handling
 * Exception Handling
 * Git & GitHub
@@ -77,6 +80,8 @@ This project helped in understanding:
 * Classes and Objects
 * Encapsulation
 * Collections Framework
+* ArrayList
+* Sorting using Comparator
 * File Handling
 * Exception Handling
 * Project Structure
