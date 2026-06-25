@@ -6,6 +6,7 @@ out/
 .idea/
 *.iml
 students.txt
+Students.csv
 
 ### Eclipse ###
 .apt_generated

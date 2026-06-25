@@ -1,44 +1,94 @@
-# Student Management System (V1)
+# Student Management System
 
-A console-based Student Management System built using Core Java.
+> This project demonstrates the evolution of a Student Management
+> System from basic Java collections to enterprise-level
+> backend development.
 
-## Project Screenshot
+A console-based Student Management System developed in Core Java. 
+This project is being progressively evolved from basic 
+Java collections to enterprise-level backend development 
+using JDBC, Spring Boot, PostgreSQL, and Docker.
+
+## Current Status
+
+| Version                | Status      |
+|------------------------|-------------|
+| V1 (ArrayList)         | ✅ Completed |
+| V2 (HashMap + CSV)     | ✅ Completed |
+| V3 (JDBC + PostgreSQL) | 🚧 Planned  |
+| V4 (Spring Boot)       | 🚧 Planned  |
+| V5 (Docker)            | 🚧 Planned  |
+
+
+## Version Comparison
+
+| Feature        | V1        | V2                  |
+|----------------|-----------|---------------------|
+| Data Structure | ArrayList | HashMap             |
+| Search         | O(n)      | O(1)                |
+| Find by ID     | O(n)      | O(1)                |
+| Delete         | O(n)      | O(1)                |
+| Storage        | Text File | CSV File            |
+| Sorting        | ArrayList | HashMap + ArrayList |
+
+
+## V1 Screenshots
 ![Add Student.png](Screenshot/Add%20Student.png) 
 ![Deleted Student Detail.png](Screenshot/Deleted%20Student%20Detail.png)
 ![Search Student By ID.png](Screenshot/Search%20Student%20By%20ID.png)
 ![Updated Name.png](Screenshot/Updated%20Name.png)
 ![View Student.png](Screenshot/View%20Student.png)
 
+## V2 Screenshots (HashMap Version)
+![Sort By ID.png](Screenshot/Sort%20By%20ID.png)
+![Sort By Name.png](Screenshot/Sort%20By%20Name.png)
+
 ## Features
 
-* Add Student
-* View Students
-* Search Student by ID
-* Update Student Details
-* Delete Student
-* Sort Students by ID
-* Sort Students by Name
-* Total Student Count
-* Validation
-* Exception Handling
-* Auto Save
-* Auto Load
-* File Handling using Text Files
+- Add Student
+- View Students
+- Search Student
+- Update Student
+- Delete Student
+- Validation
+- File Handling
+
+### Common Features
+- Add Student
+- View Students
+- Find Student by ID
+- Update Student
+- Delete Student
+- Validation
+
+## V2 Improvements
+
+- Migrated from `ArrayList<Student>` to `HashMap<Integer, Student>`
+- Optimized Search Operation from **O(n)** to **O(1)**
+- Optimized Delete Operation from **O(n)** to **O(1)**
+- Optimized Find Operation from **O(n)** to **O(1)**
+- CSV-based Persistent Storage
+- Improved Update Module
+- Sorting by Student ID
+- Sorting by Student Name
 
 ## Technologies Used
 
 * Java
 * OOP (Object-Oriented Programming)
-* ArrayList
 * Collections Framework
+* Comparator
+* ArrayList (v1)
+* HashMap (v2)
 * File Handling
+* Text(.txt) Based File Handling (v1)
+* CSV File Handling
 * Exception Handling
 * Git & GitHub
 
 ## Project Structure
 
 ```text
-## Project Structure
 
 src/
 └── StudentManagementSystem
@@ -50,39 +100,51 @@ src/
     │   └── FileManager.java
     │
     └── v2
-        └── README.md
-
+        ├── Application.java
+        ├── Student.java
+        ├── StudentManager.java
+        ├── Validation.java
+        └── FileManager.java
 ```
+
+## Version Evolution
 
 ### V1
 
-Implemented using:
+- Data Structure: ArrayList
+- Time Complexity (Search): O(n)
+- Storage: Text File
 
-* ArrayList<Student>
-* CRUD Operations
-* Validation Layer
-* FileManager
-* Auto Save / Auto Load
+### V2
 
-## Future Improvements (V2)
+- Data Structure: HashMap
+- Time Complexity (Search): O(1)
+- Storage: CSV File
+- Better Project Architecture
 
-* Replace ArrayList with HashMap<Integer, Student>
-* Faster Search Operations
-* Faster Update Operations
-* Faster Delete Operations
-* Improved Project Architecture
+## Future Roadmap
 
+- [x] V1 - ArrayList
+- [x] V2 - HashMap + CSV
+- [ ] V3 - JDBC + PostgreSQL
+- [ ] V4 - Spring Boot REST API
+- [ ] V5 - Docker Containerization
 
-## Learning Outcomes
+## What I Learned
 
-This project helped in understanding:
+### V1
 
-* Classes and Objects
-* Encapsulation
-* Collections Framework
-* ArrayList
-* Sorting using Comparator
-* File Handling
-* Exception Handling
-* Project Structure
-* Git and GitHub Workflow
+- OOP
+- Collections
+- ArrayList
+- File Handling
+
+### V2
+
+- HashMap
+- CSV Handling
+- Comparator
+- Better Project Architecture
+- CRUD Optimization
+- HashMap Performance
+- Time Complexity Optimization

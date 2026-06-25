@@ -40,7 +40,7 @@ public class StudentManager {
         }
 
         students.add(student);
-        System.out.println("Student Added Successfully");
+        System.out.println("Student details added Successfully");
     }
 
     public void viewStudents(){

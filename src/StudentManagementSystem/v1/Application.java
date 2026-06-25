@@ -16,13 +16,13 @@ public class Application {
                         1.) Add Student\s
                         2.) View Student\s
                         3.) Search Student By ID\s
-                        4.) Delete Student\s
+                        4.) Delete Student By ID\s
                         5.) Update Student Data\s
                         6.) Total Number of Students\s
                         7.) Sort By ID\s
                         8.) Sort By Name\s
                         9.) Exit
-                        """
+                """
         );
             try {
             System.out.println("Enter option: ");
@@ -53,6 +53,7 @@ public class Application {
 
                         manager.addStudent(student);
                         break;
+
                     case 2:          // View Student
                         manager.viewStudents();
                         break;
@@ -79,17 +80,20 @@ public class Application {
                         if(updateStudent == null){
                             System.out.println("Student not found");
                             break;
+                        }else{
+                            System.out.println("Student Found");
+                            manager.findStudentById(Id);
                         }
 
                         boolean updateMenu = true;
                         while (updateMenu){
                             System.out.println("""
-                                -------- Update Menu --------
-                                1. Update First Name
-                                2. Update Last Name
-                                3. Update Age
-                                4. Update Course
-                                5. View Current Details
+                                -------- Update Menu --------\s
+                                1. Update First Name\s
+                                2. Update Last Name\s
+                                3. Update Age\s
+                                4. Update Course\s
+                                5. View Current Details\s
                                 6. Exit Update Menu
                                 """);
 
@@ -146,11 +150,11 @@ public class Application {
                         System.out.println("Total Number of Students : " + totalStudents);
                         break;
 
-                    case 7:
+                    case 7:         // Sort Students By ID(0-9)
                         manager.sortStudentsById();
                         break;
 
-                    case 8:
+                    case 8:         // Sort Students By Name(A-Z)
                         manager.sortStudentsName();
                         break;
 
