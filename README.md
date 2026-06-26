@@ -1,5 +1,9 @@
 # Student Management System
 
+> **Each version builds upon the previous one to demonstrate the evolution from Core 
+> Java collections to enterprise backend development using industry-standard 
+> technologies.**
+
 > This project demonstrates the evolution of a Student Management
 > System from basic Java collections to enterprise-level
 > backend development.
@@ -15,22 +19,33 @@ using JDBC, Spring Boot, PostgreSQL, and Docker.
 |------------------------|-------------|
 | V1 (ArrayList)         | ✅ Completed |
 | V2 (HashMap + CSV)     | ✅ Completed |
-| V3 (JDBC + PostgreSQL) | 🚧 Planned  |
+| V3 (JDBC + PostgreSQL) | ✅ Completed |
 | V4 (Spring Boot)       | 🚧 Planned  |
 | V5 (Docker)            | 🚧 Planned  |
 
 
-## Version Comparison
+## Version Comparison Table
 
-| Feature        | V1        | V2                  |
-|----------------|-----------|---------------------|
-| Data Structure | ArrayList | HashMap             |
-| Search         | O(n)      | O(1)                |
-| Find by ID     | O(n)      | O(1)                |
-| Delete         | O(n)      | O(1)                |
-| Storage        | Text File | CSV File            |
-| Sorting        | ArrayList | HashMap + ArrayList |
+| Feature            | V1        | V2       | V3                  |
+|--------------------|-----------|----------|---------------------|
+| Data Structure     | ArrayList | HashMap  | PostgreSQL Database |
+| Search             | O(n)      | O(1)     | SQL Query           |
+| Find by ID         | O(n)      | O(1)     | SQL Query           |
+| Delete             | O(n)      | O(1)     | SQL Query           |
+| Persistent Storage | Text File | CSV File | PostgreSQL          |
+| JDBC               | ❌         | ❌        | ✅                   |
+| DAO Layer          | ❌         | ❌        | ✅                   |
 
+
+## Project Evolution
+
+| Version | Major Improvement     |
+|---------|-----------------------|
+| V1      | Core Java + ArrayList |
+| V2      | HashMap + CSV         |
+| V3      | JDBC + PostgreSQL     |
+| V4      | Spring Boot           |
+| V5      | Docker                |
 
 ## V1 Screenshots
 ![Add Student.png](Screenshot/Add%20Student.png) 
@@ -43,48 +58,64 @@ using JDBC, Spring Boot, PostgreSQL, and Docker.
 ![Sort By ID.png](Screenshot/Sort%20By%20ID.png)
 ![Sort By Name.png](Screenshot/Sort%20By%20Name.png)
 
+## V3 Screenshots (JDBC + PostgreSQL)
+![Add Student Query.png](Screenshot/Add%20Student%20Query.png) 
+![Delete Student By Id Query.png](Screenshot/Delete%20Student%20By%20Id%20Query.png)
+![Find Student By Id Query.png](Screenshot/Find%20Student%20By%20Id%20Query.png)
+![Update Student Details Query.png](Screenshot/Update%20Student%20Details%20Query.png)
+![View Students Query.png](Screenshot/View%20Students%20Query.png)
+![Total Students Count Query.png](Screenshot/Total%20Students%20Count%20Query.png)
+![Sort By Id Query.png](Screenshot/Sort%20By%20Id%20Query.png)
+![Sort By Name Query.png](Screenshot/Sort%20By%20Name%20Query.png)
+
 ## Features
 
-- Add Student
-- View Students
-- Search Student
-- Update Student
-- Delete Student
-- Validation
-- File Handling
-
 ### Common Features
+
 - Add Student
 - View Students
 - Find Student by ID
 - Update Student
 - Delete Student
 - Validation
+- Sort by ID
+- Sort by Name
+- Total Student Count
 
-## V2 Improvements
+### V1
 
-- Migrated from `ArrayList<Student>` to `HashMap<Integer, Student>`
-- Optimized Search Operation from **O(n)** to **O(1)**
-- Optimized Delete Operation from **O(n)** to **O(1)**
-- Optimized Find Operation from **O(n)** to **O(1)**
-- CSV-based Persistent Storage
-- Improved Update Module
-- Sorting by Student ID
-- Sorting by Student Name
+- ArrayList
+- Text File Storage
+
+### V2
+
+- HashMap
+- CSV File Storage
+
+### V3
+
+- PostgreSQL Database Integration
+- JDBC-based Persistence
+- SQL CRUD Operations
+- DAO Layer
+- PreparedStatement
+- ResultSet
+- Database Connection
 
 ## Technologies Used
 
-* Java
-* OOP (Object-Oriented Programming)
-* Collections Framework
-* Comparator
-* ArrayList (v1)
-* HashMap (v2)
-* File Handling
-* Text(.txt) Based File Handling (v1)
-* CSV File Handling
-* Exception Handling
-* Git & GitHub
+- Java
+- OOP
+- Collections Framework
+- ArrayList 
+- HashMap 
+- JDBC
+- PostgreSQL
+- SQL
+- File Handling
+- CSV File Handling
+- Exception Handling
+- Git & GitHub
 
 ## Project Structure
 
@@ -99,12 +130,20 @@ src/
     │   ├── Validation.java
     │   └── FileManager.java
     │
-    └── v2
+    ├── v2
+    │   ├── Application.java
+    │   ├── Student.java
+    │   ├── StudentManager.java
+    │   ├── Validation.java
+    │   └── FileManager.java
+    │
+    └── v3
         ├── Application.java
         ├── Student.java
         ├── StudentManager.java
-        ├── Validation.java
-        └── FileManager.java
+        ├── StudentDAO.java
+        ├── DatabaseConnection.java
+        └── Validation.java
 ```
 
 ## Version Evolution
@@ -121,14 +160,73 @@ src/
 - Time Complexity (Search): O(1)
 - Storage: CSV File
 - Better Project Architecture
+ 
+
+### V3
+
+- Database: PostgreSQL
+- Persistence: JDBC
+- DAO Layer
+- SQL CRUD Operations
+- PreparedStatement
+- ResultSet
 
 ## Future Roadmap
 
 - [x] V1 - ArrayList
 - [x] V2 - HashMap + CSV
-- [ ] V3 - JDBC + PostgreSQL
+- [x] V3 - JDBC + PostgreSQL
 - [ ] V4 - Spring Boot REST API
 - [ ] V5 - Docker Containerization
+
+
+## Architecture Evolution
+
+```text
+V1
+-----------------
+Application
+     │
+     ▼
+StudentManager
+     │
+     ▼
+ArrayList
+-----------------
+
+
+V2
+-----------------
+Application
+     │
+     ▼
+StudentManager
+     │
+     ▼
+HashMap
+     │
+     ▼
+CSV File
+-----------------
+
+
+V3
+-----------------
+Application
+     │
+     ▼
+StudentManager
+     │
+     ▼
+StudentDAO
+     │
+     ▼
+JDBC
+     │
+     ▼
+PostgreSQL
+----------------
+```
 
 ## What I Learned
 
@@ -148,3 +246,24 @@ src/
 - CRUD Optimization
 - HashMap Performance
 - Time Complexity Optimization
+
+### V3
+
+- JDBC
+- PostgreSQL
+- SQL
+- PreparedStatement
+- ResultSet
+- CRUD Operations using SQL
+- DAO Design Pattern
+- Database Connectivity
+
+## Design Evolution
+
+V1 focused on learning Core Java collections using ArrayList.
+
+V2 improved the architecture by replacing ArrayList with HashMap and introduced CSV-based persistence.
+
+V3 migrated the application from file-based storage to PostgreSQL using JDBC and introduced a dedicated DAO layer for database access.
+
+Future versions will evolve this project into a Spring Boot REST API and finally a Dockerized application.
