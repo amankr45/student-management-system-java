@@ -1,269 +1,169 @@
 # Student Management System
 
-> **Each version builds upon the previous one to demonstrate the evolution from Core 
-> Java collections to enterprise backend development using industry-standard 
-> technologies.**
+> **A Java backend learning project that evolves from Core Java to Spring Framework through four progressively improved versions of the same application.**
 
-> This project demonstrates the evolution of a Student Management
-> System from basic Java collections to enterprise-level
-> backend development.
+This repository demonstrates my learning journey by continuously improving the same **Student Management System** instead of creating separate projects for every new technology. Each version introduces new concepts while improving the architecture, maintainability, and scalability of the application.
 
-A console-based Student Management System developed in Core Java. 
-This project is being progressively evolved from basic 
-Java collections to enterprise-level backend development 
-using JDBC, Spring Boot, PostgreSQL, and Docker.
+---
 
-## Current Status
+# Project Evolution
 
-| Version                | Status      |
-|------------------------|-------------|
-| V1 (ArrayList)         | ✅ Completed |
-| V2 (HashMap + CSV)     | ✅ Completed |
-| V3 (JDBC + PostgreSQL) | ✅ Completed |
-| V4 (Spring Boot)       | 🚧 Planned  |
-| V5 (Docker)            | 🚧 Planned  |
+| Version | Focus                          | Technologies                                | Status      |
+|---------|--------------------------------|---------------------------------------------|-------------|
+| **V1**  | Core Java Fundamentals         | Java, OOP, ArrayList                        | ✅ Completed |
+| **V2**  | Collections & File Persistence | HashMap, CSV File Handling                  | ✅ Completed |
+| **V3**  | Database Integration           | JDBC, PostgreSQL                            | ✅ Completed |
+| **V4**  | Spring Framework               | Spring Core, Spring JDBC, PostgreSQL, Maven | ✅ Completed |
 
+---
 
-## Version Comparison Table
+# Technologies Used
 
-| Feature            | V1        | V2       | V3                  |
-|--------------------|-----------|----------|---------------------|
-| Data Structure     | ArrayList | HashMap  | PostgreSQL Database |
-| Search             | O(n)      | O(1)     | SQL Query           |
-| Find by ID         | O(n)      | O(1)     | SQL Query           |
-| Delete             | O(n)      | O(1)     | SQL Query           |
-| Persistent Storage | Text File | CSV File | PostgreSQL          |
-| JDBC               | ❌         | ❌        | ✅                   |
-| DAO Layer          | ❌         | ❌        | ✅                   |
+## Core Java
 
+* Java 21
+* Object-Oriented Programming (OOP)
+* Collections Framework
+* Exception Handling
+* File Handling
 
-## Project Evolution
+## Database
 
-| Version | Major Improvement     |
-|---------|-----------------------|
-| V1      | Core Java + ArrayList |
-| V2      | HashMap + CSV         |
-| V3      | JDBC + PostgreSQL     |
-| V4      | Spring Boot           |
-| V5      | Docker                |
+* JDBC
+* PostgreSQL
+* SQL
+* Prepared Statements
 
-## V1 Screenshots
-![Add Student.png](Screenshot/Add%20Student.png) 
-![Deleted Student Detail.png](Screenshot/Deleted%20Student%20Detail.png)
-![Search Student By ID.png](Screenshot/Search%20Student%20By%20ID.png)
-![Updated Name.png](Screenshot/Updated%20Name.png)
-![View Student.png](Screenshot/View%20Student.png)
+## Spring Framework
 
-## V2 Screenshots (HashMap Version)
-![Sort By ID.png](Screenshot/Sort%20By%20ID.png)
-![Sort By Name.png](Screenshot/Sort%20By%20Name.png)
+* Spring Core
+* Dependency Injection (DI)
+* Inversion of Control (IoC)
+* Java Configuration
+* Component Scanning
+* Spring JDBC
+* JdbcTemplate
+* Externalized Configuration
 
-## V3 Screenshots (JDBC + PostgreSQL)
-![Add Student Query.png](Screenshot/Add%20Student%20Query.png) 
-![Delete Student By Id Query.png](Screenshot/Delete%20Student%20By%20Id%20Query.png)
-![Find Student By Id Query.png](Screenshot/Find%20Student%20By%20Id%20Query.png)
-![Update Student Details Query.png](Screenshot/Update%20Student%20Details%20Query.png)
-![View Students Query.png](Screenshot/View%20Students%20Query.png)
-![Total Students Count Query.png](Screenshot/Total%20Students%20Count%20Query.png)
-![Sort By Id Query.png](Screenshot/Sort%20By%20Id%20Query.png)
-![Sort By Name Query.png](Screenshot/Sort%20By%20Name%20Query.png)
+## Build Tool
 
-## Features
+* Maven
 
-### Common Features
+## Version Control
 
-- Add Student
-- View Students
-- Find Student by ID
-- Update Student
-- Delete Student
-- Validation
-- Sort by ID
-- Sort by Name
-- Total Student Count
+* Git
+* GitHub
 
-### V1
+---
 
-- ArrayList
-- Text File Storage
-
-### V2
-
-- HashMap
-- CSV File Storage
-
-### V3
-
-- PostgreSQL Database Integration
-- JDBC-based Persistence
-- SQL CRUD Operations
-- DAO Layer
-- PreparedStatement
-- ResultSet
-- Database Connection
-
-## Technologies Used
-
-- Java
-- OOP
-- Collections Framework
-- ArrayList 
-- HashMap 
-- JDBC
-- PostgreSQL
-- SQL
-- File Handling
-- CSV File Handling
-- Exception Handling
-- Git & GitHub
-
-## Project Structure
+# Repository Structure
 
 ```text
-
-src/
-└── StudentManagementSystem
-    ├── v1
-    │   ├── Application.java
-    │   ├── Student.java
-    │   ├── StudentManager.java
-    │   ├── Validation.java
-    │   └── FileManager.java
-    │
-    ├── v2
-    │   ├── Application.java
-    │   ├── Student.java
-    │   ├── StudentManager.java
-    │   ├── Validation.java
-    │   └── FileManager.java
-    │
-    └── v3
-        ├── Application.java
-        ├── Student.java
-        ├── StudentManager.java
-        ├── StudentDAO.java
-        ├── DatabaseConnection.java
-        └── Validation.java
+StudentManagementSystem/
+│
+├── README.md
+│
+├── v1/
+│   ├── README.md
+│   └── ...
+│
+├── v2/
+│   ├── README.md
+│   └── ...
+│
+├── v3/
+│   ├── README.md
+│   └── ...
+│
+└── v4/
+    ├── README.md
+    └── ...
 ```
 
-## Version Evolution
+---
 
-### V1
+# Learning Progress
 
-- Data Structure: ArrayList
-- Time Complexity (Search): O(n)
-- Storage: Text File
+Throughout this project I learned:
 
-### V2
+* Core Java
+* Object-Oriented Programming
+* Collections Framework
+* ArrayList
+* HashMap
+* File Handling
+* Exception Handling
+* JDBC
+* PostgreSQL
+* SQL CRUD Operations
+* DAO Design Pattern
+* Layered Architecture
+* Maven
+* Spring Core
+* Dependency Injection
+* Inversion of Control (IoC)
+* Spring JDBC
+* Externalized Configuration
 
-- Data Structure: HashMap
-- Time Complexity (Search): O(1)
-- Storage: CSV File
-- Better Project Architecture
- 
+---
 
-### V3
+# Version Highlights
 
-- Database: PostgreSQL
-- Persistence: JDBC
-- DAO Layer
-- SQL CRUD Operations
-- PreparedStatement
-- ResultSet
+## V1
 
-## Future Roadmap
+* Built a menu-driven Student Management System using Core Java.
+* Used `ArrayList` for in-memory data storage.
+* Implemented CRUD operations and file persistence.
 
-- [x] V1 - ArrayList
-- [x] V2 - HashMap + CSV
-- [x] V3 - JDBC + PostgreSQL
-- [ ] V4 - Spring Boot REST API
-- [ ] V5 - Docker Containerization
+## V2
 
+* Replaced `ArrayList` with `HashMap` for faster lookups.
+* Added CSV file storage.
+* Improved project structure and performance.
 
-## Architecture Evolution
+## V3
 
-```text
-V1
------------------
-Application
-     │
-     ▼
-StudentManager
-     │
-     ▼
-ArrayList
------------------
+* Migrated persistence from files to PostgreSQL.
+* Implemented JDBC for database connectivity.
+* Introduced the DAO (Data Access Object) pattern.
 
+## V4
 
-V2
------------------
-Application
-     │
-     ▼
-StudentManager
-     │
-     ▼
-HashMap
-     │
-     ▼
-CSV File
------------------
+* Migrated the project to Spring Framework.
+* Implemented Dependency Injection using the Spring IoC Container.
+* Replaced manual JDBC code with Spring `JdbcTemplate`.
+* Externalized database configuration using properties files.
+* Followed a layered architecture using Service, DAO, Configuration, and Console components.
 
+---
 
-V3
------------------
-Application
-     │
-     ▼
-StudentManager
-     │
-     ▼
-StudentDAO
-     │
-     ▼
-JDBC
-     │
-     ▼
-PostgreSQL
-----------------
+# Screenshots
+
+Each version contains its own screenshots and documentation inside its respective directory.
+
+---
+
+# How to Run
+
+Navigate to the required version directory and follow the instructions provided in its `README.md`.
+
+For **V4**:
+
+```bash
+mvn clean compile
+mvn exec:java -Dexec.mainClass=com.aman.studentmanagementsystem.StudentManagementSystemApplication
 ```
 
-## What I Learned
+---
 
-### V1
+# Repository Goal
 
-- OOP
-- Collections
-- ArrayList
-- File Handling
+The objective of this repository is to demonstrate the gradual evolution of a backend application while learning modern Java development practices.
 
-### V2
+Instead of building multiple unrelated projects, the same application is continuously improved to understand how software evolves as new technologies are introduced.
 
-- HashMap
-- CSV Handling
-- Comparator
-- Better Project Architecture
-- CRUD Optimization
-- HashMap Performance
-- Time Complexity Optimization
+---
 
-### V3
+# Author
 
-- JDBC
-- PostgreSQL
-- SQL
-- PreparedStatement
-- ResultSet
-- CRUD Operations using SQL
-- DAO Design Pattern
-- Database Connectivity
-
-## Design Evolution
-
-V1 focused on learning Core Java collections using ArrayList.
-
-V2 improved the architecture by replacing ArrayList with HashMap and introduced CSV-based persistence.
-
-V3 migrated the application from file-based storage to PostgreSQL using JDBC and introduced a dedicated DAO layer for database access.
-
-Future versions will evolve this project into a Spring Boot REST API and finally a Dockerized application.
+**Aman Kumar**
