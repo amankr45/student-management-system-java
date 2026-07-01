@@ -58,26 +58,74 @@ This repository demonstrates my learning journey by continuously improving the s
 
 # Repository Structure
 
+
 ```text
 StudentManagementSystem/
 │
 ├── README.md
+├── .gitignore
+├── Screenshot/
 │
 ├── v1/
 │   ├── README.md
-│   └── ...
+│   ├── students.txt
+│   └── src/
+│       └── StudentManagementSystem/
+│           └── v1/
+│               ├── Application.java
+│               ├── Student.java
+│               ├── StudentManager.java
+│               ├── Validation.java
+│               └── FileManager.java
 │
 ├── v2/
 │   ├── README.md
-│   └── ...
+│   ├── Students.csv
+│   └── src/
+│       └── StudentManagementSystem/
+│           └── v2/
+│               ├── Application.java
+│               ├── Student.java
+│               ├── StudentManager.java
+│               ├── Validation.java
+│               └── FileManager.java
 │
 ├── v3/
 │   ├── README.md
-│   └── ...
+│   ├── lib/
+│   │   └── postgresql-42.7.11.jar
+│   └── src/
+│       └── StudentManagementSystem/
+│           └── v3/
+│               ├── Application.java
+│               ├── DatabaseConnection.java
+│               ├── StudentDAO.java
+│               ├── StudentManager.java
+│               ├── Student.java
+│               ├── Validation.java
+│               └── ConnectionTest.java
 │
 └── v4/
     ├── README.md
-    └── ...
+    ├── pom.xml
+    ├── .mvn/
+    └── src/
+        └── main/
+            ├── java/
+            │   └── com/
+            │       └── aman/
+            │           └── studentmanagementsystem/
+            │               ├── config/
+            │               ├── console/
+            │               ├── constants/
+            │               ├── dao/
+            │               ├── exception/
+            │               ├── model/
+            │               ├── service/
+            │               └── StudentManagementSystemApplication.java
+            │
+            └── resources/
+                └── database.properties
 ```
 
 ---
